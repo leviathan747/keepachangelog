@@ -116,7 +116,8 @@ function buildHeader(el) {
   var {level} = el.shift();
   var title = buildElementList(el);
   var header = repeat(level, '#');
-  return header + ' ' + title + '\n';
+  var ender = repeat(level < 3 ? 2 : 1, '\n');
+  return header + ' ' + title + ender;
 }
 
 
@@ -133,7 +134,8 @@ function buildAndSurroundElementList (marker, els) {
 function buildReleases(releases) {
   return map(releases, (release) => {
     var title = getReleaseTitle(release);
-    return buildHeader([{level: 2}].concat(title)) +
+    return '\n' + 
+           buildHeader([{level: 2}].concat(title)) +
            buildVersionLog('Added', release) +
            buildVersionLog('Changed', release) +
            buildVersionLog('Removed', release) +
@@ -163,7 +165,7 @@ function buildVersionLog(name, release) {
   var list = map(log, (entry) => {
     return '- ' + indent(buildElementList(entry), 2).trim();
   });
-  return header + list.join('\n') + '\n\n';
+  return header + list.join('\n') + '\n' + (list.length ? '\n' : '');
 }
 
 
