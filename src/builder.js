@@ -57,6 +57,8 @@ function buildElement(el) {
       return buildLink(el);
     case 'link_ref':
       return buildLinkRef(el);
+    case 'linebreak':
+      return buildLineBreak(el);
     default:
       throw new Error(`Unknown tag ${tagName}`);
   }
@@ -95,6 +97,11 @@ function buildLink(el) {
 
 function buildLinkRef(el) {
   return el[0].original
+}
+
+
+function buildLineBreak(el) {
+  return '\n';
 }
 
 
