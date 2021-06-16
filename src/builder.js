@@ -1,6 +1,6 @@
 'use strict';
 
-import {map, capitalize} from 'lodash-node';
+import {map, capitalize} from 'lodash';
 import semver from 'semver';
 
 /**

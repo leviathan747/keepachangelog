@@ -1,7 +1,7 @@
 'use strict';
 
 import {markdown} from 'markdown';
-import {forEach, extend, map} from 'lodash-node'
+import {forEach, extend, map} from 'lodash'
 import semver from 'semver';
 
 import {elementText} from './builder'

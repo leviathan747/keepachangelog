@@ -5,7 +5,7 @@ var babel = require('gulp-babel');
 
 gulp.task('compile', function () {
     return gulp.src('src/**/*.js')
-        .pipe(babel({optional: ['runtime']}))
+        .pipe(babel())
         .pipe(gulp.dest('dist'));
 });
 

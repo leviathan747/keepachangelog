@@ -1,6 +1,6 @@
 {
   "name": "keepachangelog",
-  "version": "0.7.2",
+  "version": "0.8.0",
   "description": "Programatically modify change logs",
   "main": "index.js",
   "scripts": {
@@ -21,20 +21,15 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "babel-runtime": "^4.7.8",
-    "bluebird": "^2.9.13",
-    "lodash-node": "^3.5.0",
+    "bluebird": "^3.7.2",
+    "lodash": "^4.17.21",
     "markdown": "^0.5.0",
-    "parsimmon": "0.7.0",
-    "semver": "^4.3.1"
+    "parsimmon": "^1.17.0",
+    "semver": "^7.3.5"
   },
   "devDependencies": {
-    "babel": "^4.7.8",
-    "chai": "^2.1.1",
-    "co": "^4.4.0",
+    "babel": "^6.23.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^4.0.0",
-    "mocha": "^2.2.1",
-    "sinon": "^10.0.0"
+    "gulp-babel": "^8.0.0"
   }
 }

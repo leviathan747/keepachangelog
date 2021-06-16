@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var {find} = require('lodash-node');
+var {find} = require('lodash');
 var {promisify} = require('bluebird');
 var readFile = promisify(fs.readFile);
 var writeFile = promisify(fs.writeFile);
